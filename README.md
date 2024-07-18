@@ -1,4 +1,4 @@
-# Rebake Flutter App
+# Tezda Flutter App
 
 Welcome to Tezda, a Flutter application. This README will guide you through setting up the development environment.
 
