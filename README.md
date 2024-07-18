@@ -1,16 +1,33 @@
-# tezda
+# Rebake Flutter App
 
-A new Flutter project.
+Welcome to Tezda, a Flutter application. This README will guide you through setting up the development environment.
 
-## Getting Started
+## Prerequisites
 
-This project is a starting point for a Flutter application.
+- Flutter SDK
+- Dart SDK
+- FVM (Flutter Version Manager)
+- VS Code or Android Studio
 
-A few resources to get you started if this is your first Flutter project:
+## Setting Up FVM
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+FVM helps you manage Flutter versions and ensures consistency across different environments. The project contains a `.fvm/fvm_config.json` file specifying the required Flutter version. You only need to have FVM installed.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Key Implementation Details
+
+Local Storage:
+
+Used shared_preferences for storing credentials and favorites locally for quick prototyping.
+Implemented cached authentication and cached favorites to enhance performance and offline availability.
+State Management:
+
+Used the provider package for managing authentication state.
+Form Validation:
+
+Utilized Form and TextFormField for user input validation.
+Navigation:
+
+Employed named routes for clean navigation.
+Fetching Data:
+
+Integrated (https://fakestoreapi.com/products/) for real product data.
