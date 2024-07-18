@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -23,14 +21,15 @@ class CartScreen extends StatelessWidget {
               color: Colors.black,
             ),
             actions: [
-              IconButton(
-                  onPressed: () {
-                    viewmodel.clearCart();
-                  },
-                  icon: const Icon(
-                    Icons.cancel_outlined,
-                    color: Colors.black,
-                  ))
+              if (viewmodel.cartItems.isNotEmpty)
+                IconButton(
+                    onPressed: () {
+                      viewmodel.clearCart();
+                    },
+                    icon: const Icon(
+                      Icons.cancel_outlined,
+                      color: Colors.black,
+                    ))
             ],
           ),
           body: viewmodel.cartItems.isEmpty
@@ -39,6 +38,9 @@ class CartScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset('assets/images/no_orders.png'),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       const Text(
                         "Cart empty",
                         style: TextStyle(fontSize: 20),

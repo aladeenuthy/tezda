@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
         navigatorKey: KeyHelper.appNavKey,
         scaffoldMessengerKey: KeyHelper.scafKey,
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Tezda',
         theme: theme(),
         onGenerateRoute: (settings) {
           if (settings.name == FoodDetailsScreen.routeName) {

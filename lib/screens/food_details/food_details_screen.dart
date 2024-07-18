@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -64,6 +63,9 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen> {
               child: AppAnimatedColumn(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const SizedBox(
+                      height: 20,
+                    ),
                     SizedBox(
                       height: 180,
                       child: PageView.builder(
@@ -71,6 +73,9 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen> {
                           itemCount: widget.product.images.length,
                           itemBuilder: (_, index) => CachedNetworkImage(
                               imageUrl: widget.product.images[index])),
+                    ),
+                    const SizedBox(
+                      height: 10,
                     ),
                     Center(
                       child: SizedBox(
@@ -98,6 +103,9 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen> {
                           fontWeight: FontWeight.bold,
                           fontSize: 28),
                     )),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     Center(
                       child: Text("\$${widget.product.price}",
                           style: const TextStyle(
